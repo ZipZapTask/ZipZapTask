@@ -12,8 +12,9 @@
                 <div class="row g-0">
                     <div class="col-md-3">
                         <img src="{{ member.image_url if member.image_url.startswith('http') else url_for('static', filename=member.image_url) }}"
-                             class="img-fluid rounded h-100"
-                             alt="{{ member.name }}'s photo">
+                             class="img-fluid rounded w-100 h-100 object-fit-cover"
+                             alt="{{ member.name }}'s photo"
+                             style="aspect-ratio: 1/1;">
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
