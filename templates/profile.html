@@ -7,134 +7,23 @@
         <h2>Meet our team!</h2>
     </header>
     <section class="m-3">
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/sam_powers.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Sam Powers</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Project manager</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
+        {% for member in team_members %}
+            <div class="card p-3 m-3 col-8">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="{{ member.image_url if member.image_url.startswith('http') else url_for('static', filename=member.image_url) }}"
+                             class="img-fluid rounded h-100"
+                             alt="{{ member.name }}'s photo">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ member.name }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ member.role }}</h6>
+                            <p class="card-text">{{ member.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="https://placehold.co/100x100" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Vinay Thamara</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/sebastian_tovar.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Sebastian Tovar</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/alex_jones.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Alex Jones</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/jaecar_ly.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Jaecar Ly</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Designer</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/eric_atkins.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Eric Atkins</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Research & Design</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="https://placehold.co/100x100" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Zach Cobb</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Research</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card p-3 m-3 col-8" >
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="{{ url_for('static', filename='media/team/nick_blank.jpeg') }}" class="img-fluid rounded h-100" alt="Avatar">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Nick Blank</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Research</h6>
-                        <p class="card-text">This is some sample content for the card. You can put any text or
-                            additional elements here.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+        {% endfor %}
     </section>
 {% endblock %}
