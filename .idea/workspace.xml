@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c6f74b9-48f0-4f90-bf9c-aa66f8b28ecf" name="Changes" comment="" />
+    <list default="true" id="2c6f74b9-48f0-4f90-bf9c-aa66f8b28ecf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/landing.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +74,6 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ZipZapTask$ZipZapTask.coverage" NAME="ZipZapTask Coverage Results" MODIFIED="1729732019456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ZipZapTask$ZipZapTask.coverage" NAME="ZipZapTask Coverage Results" MODIFIED="1729732258250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
