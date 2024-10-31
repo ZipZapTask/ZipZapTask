@@ -13,6 +13,10 @@ def inject_nav_items():
             'name': 'Profile',
             'url': 'profile'
         },
+        {
+            'name': 'Project Charter',
+            'url': 'projectCharter'
+        },
         # Add more items here
     ]
     return dict(nav_items=nav_items)  # Now passing the list directly
@@ -20,6 +24,10 @@ def inject_nav_items():
 @app.route('/')
 def home():
     return render_template("home.html")
+
+@app.route('/projectCharter')
+def projectCharter():
+    return render_template("projectCharter.html")
 
 @app.route('/profile')
 def profile():
