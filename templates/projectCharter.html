@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Charter</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-</head>
-<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+{% extends 'base.html' %}
+
+{% block title %} Project Charter {% endblock %}
+
+{% block content %}
     <div class="max-w-6xl mx-auto">
         <!-- Header Section -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-8 border-l-4 border-blue-600">
@@ -15,19 +11,19 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bg-gray-50 p-4 rounded">
                     <span class="text-blue-600 font-semibold">Project Name:</span>
-                    <div class="mt-1">[Project Name]</div>
+                    <div class="mt-1">ZipZapTask</div>
                 </div>
                 <div class="bg-gray-50 p-4 rounded">
                     <span class="text-blue-600 font-semibold">Date:</span>
-                    <div class="mt-1">[Date]</div>
+                    <div class="mt-1">12/3/24</div>
                 </div>
                 <div class="bg-gray-50 p-4 rounded">
                     <span class="text-blue-600 font-semibold">Project Manager:</span>
-                    <div class="mt-1">[Name]</div>
+                    <div class="mt-1">Sam Powers</div>
                 </div>
                 <div class="bg-gray-50 p-4 rounded">
                     <span class="text-blue-600 font-semibold">Project Sponsor:</span>
-                    <div class="mt-1">[Sponsor Name]</div>
+                    <div class="mt-1">The Company</div>
                 </div>
             </div>
         </div>
@@ -149,5 +145,5 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+
+{% endblock %}
