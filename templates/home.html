@@ -3,24 +3,24 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-    <div class="jumbotron text-center mt-5">
-        <h1>Zap your problems away!</h1>
-        <h2>One Zip at a Time</h2>
-        <a class="btn btn-primary" href="{{ url_for('profile') }}">Learn about our team</a>
+    <div class="text-center mt-20">
+        <h1 class="text-4xl font-bold">Zap your problems away!</h1>
+        <h2 class="text-2xl mt-2">One Zip at a Time</h2>
+        <a class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" href="{{ url_for('profile') }}">Learn about our team</a>
     </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Radical Solutions</h3>
-                <p>Lorem Bacon Bacon Bacon ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div class="container mx-auto px-4 mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Radical Solutions</h3>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
-            <div class="col-md-4">
-                <h3>The Possibilities</h3>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">The Possibilities</h3>
+                <p class="text-gray-700">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>
-            <div class="col-md-4">
-                <h3>No Downsides!</h3>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">No Downsides!</h3>
+                <p class="text-gray-700">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
             </div>
         </div>
     </div>

@@ -3,24 +3,24 @@
 {% block title %} Profile {% endblock %}
 
 {% block content %}
-    <header class="masthead m-3">
-        <h2>Meet our team!</h2>
+    <header class="m-8">
+        <h2 class="text-3xl font-bold">Meet our team!</h2>
     </header>
-    <section class="m-3">
+
+    <section class="m-8 space-y-6">
         {% for member in team_members %}
-            <div class="card p-3 m-3 col-8">
-                <div class="row g-0">
-                    <div class="col-md-3">
+            <div class="bg-white rounded-lg shadow-md p-6 mx-auto max-w-4xl">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/4">
                         <img src="{{ member.image_url if member.image_url.startswith('http') else url_for('static', filename=member.image_url) }}"
-                             class="img-fluid rounded w-100 h-100 object-fit-cover"
-                             alt="{{ member.name }}'s photo"
-                             style="aspect-ratio: 1/1;">
+                             class="w-full h-full object-cover rounded-lg aspect-square"
+                             alt="{{ member.name }}'s photo">
                     </div>
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ member.name }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{ member.role }}</h6>
-                            <p class="card-text">{{ member.description }}</p>
+                    <div class="md:w-3/4">
+                        <div class="space-y-3">
+                            <h5 class="text-xl font-bold text-gray-900">{{ member.name }}</h5>
+                            <h6 class="text-sm font-medium text-gray-500">{{ member.role }}</h6>
+                            <p class="text-gray-700">{{ member.description }}</p>
                         </div>
                     </div>
                 </div>

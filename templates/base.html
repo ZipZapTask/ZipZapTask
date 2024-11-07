@@ -1,36 +1,39 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - ZipZapTask</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>{% block title %}{% endblock %} - ZipZapTask</title>
+        <link href="{{ url_for('static',filename='css/main.css') }}" rel="stylesheet" >
+    </head>
+    <body>
+        <header>
+            <nav class="bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex flex-wrap items-center justify-between py-4">
+                        <a href="{{ url_for('home') }}" class="text-xl font-bold text-gray-800 hover:font-extrabold">
+                            ZipZapTask
+                        </a>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('home') }}">ZipZapTask</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {% for item in nav_items %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == item.url %}active{% endif %}"
-                       href="{{ url_for(item.url) }}">
-                        {{ item.name }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</nav>
-<section class="content">
-    {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-    {% endfor %}
-    {% block content %}{% endblock %}
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+                        <div class="flex flex-wrap items-center gap-4">
+                            {% for item in nav_items %}
+                                <a href="{{ url_for(item.url) }}"
+                                   class="px-3 py-2 rounded-md text-sm font-medium
+                                      {% if request.endpoint == item.url %}
+                                      text-blue-600 bg-blue-50
+                                      {% else %}
+                                      text-gray-600 hover:text-gray-900 hover:bg-gray-50
+                                      {% endif %}">
+                                    {{ item.name }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>
