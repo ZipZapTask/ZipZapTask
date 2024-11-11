@@ -7,22 +7,15 @@ team_members = [
         'image_url': 'media/team/sam_powers.jpeg'
     },
     {
-        'name': 'Vinay Thamara',
-        'role': 'Developer',
-        'description': 'As a software developer, it is my job to make web pages and make sure things work as intended.',
-        # 'image_url': 'https://placehold.co/100x100'
-    },
-    {
-        'name': 'Sebastian Tovar',
-        'role': 'Developer',
-        # 'description': 'This is some sample content for the card. You can put any text or additional elements here.',
-        'image_url': 'media/team/sebastian_tovar.jpeg'
-    },
-    {
-        'name': 'Alex Jones',
-        'role': 'Developer',
-        # 'description': 'This is some sample content for the card. You can put any text or additional elements here.',
-        'image_url': 'media/team/alex_jones.jpeg'
+        'name': 'Nick Blank',
+        'role': 'Research',
+        'description': 'My job is to create a website that includes figuring out what the website is for and who will '
+                       'use it. They gather and check all the information that will go on the site. They also talk to '
+                       'people and test the site to make sure it’s easy to use. Researchers look at other similar '
+                       'websites to see what works and what doesn’t. They find the best words to help the site show up '
+                       'in search engines. Finally, they use tools to see how well the site is doing and what visitors '
+                       'are doing on it, then use this information to make improvements.',
+        'image_url': 'media/team/nick_blank.jpeg'
     },
     {
         'name': 'Jaecar Ly',
@@ -38,6 +31,12 @@ team_members = [
         'image_url': 'media/team/eric_atkins.jpeg'
     },
     {
+        'name': 'Vinay Thamara',
+        'role': 'Developer',
+        'description': 'As a software developer, it is my job to make web pages and make sure things work as intended.',
+        # 'image_url': 'https://placehold.co/100x100'
+    },
+    {
         'name': 'Zach Cobb',
         'role': 'Research',
         'description': 'As a researcher, my job is to research what goes into making a functional and successful '
@@ -45,14 +44,15 @@ team_members = [
         # 'image_url': 'https://placehold.co/100x100'
     },
     {
-        'name': 'Nick Blank',
-        'role': 'Research',
-        'description': 'My job is to create a website that includes figuring out what the website is for and who will '
-                       'use it. They gather and check all the information that will go on the site. They also talk to '
-                       'people and test the site to make sure it’s easy to use. Researchers look at other similar '
-                       'websites to see what works and what doesn’t. They find the best words to help the site show up '
-                       'in search engines. Finally, they use tools to see how well the site is doing and what visitors '
-                       'are doing on it, then use this information to make improvements.',
-        'image_url': 'media/team/nick_blank.jpeg'
-    }
+        'name': 'Sebastian Tovar',
+        'role': 'Developer',
+        # 'description': 'This is some sample content for the card. You can put any text or additional elements here.',
+        'image_url': 'media/team/sebastian_tovar.jpeg'
+    },
+    {
+        'name': 'Alex Jones',
+        'role': 'Developer',
+        # 'description': 'This is some sample content for the card. You can put any text or additional elements here.',
+        'image_url': 'media/team/alex_jones.jpeg'
+    },
 ]
