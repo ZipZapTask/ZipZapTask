@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Work Breakdown Structure {% endblock %}
+
+{% block content %}
+    <header class="m-8">
+        <h2 class="text-3xl font-bold">Work Breakdown Structure</h2>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {% for section in wbs_data %}
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md p-6 mx-auto max-w-4xl border">
+                    <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
+                    <div class="space-y-3">
+                        {% for item in section.items %}
+                            <div class="p-3">
+                                {% if item.title %}
+                                    <h3 class="font-semibold">{{ item.title }}</h3>
+                                {% endif %}
+                                <p class="text-sm text-gray-600">{{ item.description }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
