@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from data.team_members import team_members
 from data.routes import routes
+from data.wbs_data import converted_data
 
 app = Flask(__name__)
 
@@ -15,6 +16,10 @@ def home():
 @app.route('/profile')
 def profile():
     return render_template("profile.html", team_members=team_members)
+
+@app.route('/wbs')
+def wbs():
+    return render_template("wbs.html", wbs_data=converted_data)
 
 if __name__ == '__main__':
     app.run()
