@@ -21,5 +21,9 @@ def profile():
 def wbs():
     return render_template("wbs.html", wbs_data=converted_data)
 
+@app.route('/gantt')
+def gantt():
+    return render_template("gantt.html")
+
 if __name__ == '__main__':
     app.run()
