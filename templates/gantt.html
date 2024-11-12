@@ -1,151 +1,8 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
-{#    <title>Simple Gantt Chart</title>#}
-{#    <style>#}
-{#        * {#}
-{#            box-sizing: border-box;#}
-{#            margin: 0;#}
-{#            padding: 0;#}
-{#        }#}
-{##}
-{#        body {#}
-{#            font-family: Arial, sans-serif;#}
-{#            padding: 20px;#}
-{#            background: #f0f2f5;#}
-{#        }#}
-{##}
-{#        .container {#}
-{#            max-width: 1200px;#}
-{#            margin: 0 auto;#}
-{#            background: white;#}
-{#            padding: 20px;#}
-{#            border-radius: 8px;#}
-{#            box-shadow: 0 2px 4px rgba(0,0,0,0.1);#}
-{#        }#}
-{##}
-{#        .input-group {#}
-{#            display: grid;#}
-{#            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;#}
-{#            gap: 10px;#}
-{#            margin-bottom: 20px;#}
-{#        }#}
-{##}
-{#        input, button {#}
-{#            padding: 8px;#}
-{#            border: 1px solid #ddd;#}
-{#            border-radius: 4px;#}
-{#            font-size: 14px;#}
-{#        }#}
-{##}
-{#        button {#}
-{#            background: #2563eb;#}
-{#            color: white;#}
-{#            border: none;#}
-{#            cursor: pointer;#}
-{#            transition: background 0.2s;#}
-{#        }#}
-{##}
-{#        button:hover {#}
-{#            background: #1d4ed8;#}
-{#        }#}
-{##}
-{#        .gantt-header {#}
-{#            display: grid;#}
-{#            grid-template-columns: 300px 1fr;#}
-{#            margin-bottom: 10px;#}
-{#            font-weight: bold;#}
-{#        }#}
-{##}
-{#        .dates {#}
-{#            display: flex;#}
-{#            border-left: 1px solid #ddd;#}
-{#        }#}
-{##}
-{#        .date-cell {#}
-{#            flex: 1;#}
-{#            min-width: 30px;#}
-{#            text-align: center;#}
-{#            padding: 5px;#}
-{#            border-right: 1px solid #ddd;#}
-{#            font-size: 12px;#}
-{#        }#}
-{##}
-{#        .task-row {#}
-{#            display: grid;#}
-{#            grid-template-columns: 300px 1fr;#}
-{#            margin-bottom: 10px;#}
-{#        }#}
-{##}
-{#        .task-info {#}
-{#            padding-right: 10px;#}
-{#        }#}
-{##}
-{#        .task-name {#}
-{#            font-weight: 500;#}
-{#            margin-bottom: 4px;#}
-{#        }#}
-{##}
-{#        .task-dates {#}
-{#            font-size: 12px;#}
-{#            color: #666;#}
-{#            margin-bottom: 4px;#}
-{#        }#}
-{##}
-{#        .task-members {#}
-{#            font-size: 12px;#}
-{#            color: #666;#}
-{#            margin-bottom: 4px;#}
-{#        }#}
-{##}
-{#        .completion-control {#}
-{#            display: flex;#}
-{#            align-items: center;#}
-{#            gap: 8px;#}
-{#            font-size: 12px;#}
-{#        }#}
-{##}
-{#        .timeline {#}
-{#            position: relative;#}
-{#            display: flex;#}
-{#            height: 40px;#}
-{#        }#}
-{##}
-{#        .task-bar {#}
-{#            position: absolute;#}
-{#            height: 20px;#}
-{#            background: rgba(37, 99, 235, 0.5);#}
-{#            border: 1px solid rgb(37, 99, 235);#}
-{#            border-radius: 4px;#}
-{#            transition: width 0.3s, left 0.3s;#}
-{#        }#}
-{##}
-{#        .delete-btn {#}
-{#            background: #dc2626;#}
-{#            padding: 4px 8px;#}
-{#            font-size: 12px;#}
-{#        }#}
-{##}
-{#        .delete-btn:hover {#}
-{#            background: #b91c1c;#}
-{#        }#}
-{##}
-{#        .gantt-container {#}
-{#            overflow-x: auto;#}
-{#        }#}
-{##}
-{#        .date-badge {#}
-{#            display: inline-block;#}
-{#            background: #f3f4f6;#}
-{#            padding: 2px 6px;#}
-{#            border-radius: 4px;#}
-{#            margin-right: 8px;#}
-{#        }#}
-{#    </style>#}
-{#</head>#}
-{#<body>#}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/gantt.css') }}">
+
+{% endblock %}
+
 {% extends 'base.html' %}
 
 {% block title %} Gantt Chart {% endblock %}
@@ -153,7 +10,7 @@
 {% block content %}
     <div class="container">
         <h1 style="margin-bottom: 20px;">Project Gantt Chart</h1>
-        
+
         <div class="input-group">
             <input type="text" id="taskName" placeholder="Task name">
             <input type="date" id="startDate">
@@ -172,7 +29,7 @@
         </div>
     </div>
 
-    <script></script>
+    <script src="{{ url_for('static',filename='scripts/gantt.js') }}"></script>
 {% endblock %}
 {#</body>#}
 {#</html>#}
