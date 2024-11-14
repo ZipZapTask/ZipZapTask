@@ -13,6 +13,10 @@ def inject_nav_items():
 def home():
     return render_template("home.html")
 
+@app.route('/projectCharter')
+def projectCharter():
+    return render_template("projectCharter.html")
+
 @app.route('/profile')
 def profile():
     return render_template("profile.html", team_members=team_members)

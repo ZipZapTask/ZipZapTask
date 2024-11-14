@@ -11,5 +11,11 @@ routes = [
         'name': 'WBS',
         'url': 'wbs'
     },
+    
+    {
+        'name': 'Project Charter',
+        'url': 'projectCharter'
+    },
+
     # Add more items here
 ]
