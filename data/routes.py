@@ -15,5 +15,9 @@ routes = [
         'name': 'Gantt Chart',
         'url': 'gantt'
     },
+    {
+        'name': 'Project Charter',
+        'url': 'projectCharter'
+    },
     # Add more items here
 ]
