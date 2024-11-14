@@ -25,5 +25,17 @@ def profile():
 def wbs():
     return render_template("wbs.html", wbs_data=converted_data)
 
+@app.route('/costEstimate')
+def costEstimate():
+    return render_template("costEstimate.html")
+
+@app.route('/criticalPathAnalysis')
+def criticalPathAnalysis():
+    return render_template("criticalPathAnalysis.html")
+
+@app.route('/riskManagement')
+def riskManagement():
+    return render_template("riskManagement.html")
+
 if __name__ == '__main__':
     app.run()

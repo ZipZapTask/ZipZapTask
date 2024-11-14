@@ -17,5 +17,20 @@ routes = [
         'url': 'projectCharter'
     },
 
+    {
+        'name': 'Critical Path Analysis',
+        'url': 'criticalPathAnalysis'
+    },
+
+    {
+        'name': 'Cost Estimates',
+        'url': 'costEstimate'
+    },
+
+    {
+        'name': 'Risk Management',
+        'url': 'riskManagement'
+    },
+
     # Add more items here
 ]
