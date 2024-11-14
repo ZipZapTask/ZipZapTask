@@ -87,7 +87,7 @@ function updateTasks(dates) {
                             <div class="task-bar" style="
                                 left: ${(startIdx / totalDays) * 100}%;
                                 width: ${(duration / totalDays) * 100}%;
-                                background-color: rgba(37, 99, 235, ${task.completion / 100});
+                                background-color: rgba(37, 99, 235, Math.min(task.completion / 100, 1));
                             "></div>
                         </div>
                     </div>
