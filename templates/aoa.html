@@ -3,7 +3,12 @@
 {% block title %} AOA Diagram {% endblock %}
 
 {% block content %}
+    <pre class="mermaid">
+        graph TD
+            A[Client] --> B[Load Balancer]
+            B --> C[Server01]
+            B --> D[Server02]
+    </pre>
 
-
-    <script src="{{ url_for('static', filename='node_modules/mermaid/mermaid.js')}}"></script>
+    <script src="{{ url_for('static', filename='node_modules/mermaid/dist/mermaid.js') }}"></script>
 {% endblock %}
