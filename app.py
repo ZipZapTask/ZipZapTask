@@ -25,5 +25,9 @@ def profile():
 def wbs():
     return render_template("wbs.html", wbs_data=converted_data)
 
+@app.route('/aoa')
+def aoa():
+    return render_template("aoa.html")
+
 if __name__ == '__main__':
     app.run()
