@@ -3,12 +3,35 @@
 {% block title %} AOA Diagram {% endblock %}
 
 {% block content %}
-    <pre class="mermaid">
-        graph TD
-            A[Client] --> B[Load Balancer]
-            B --> C[Server01]
-            B --> D[Server02]
-    </pre>
+    <div class="flex justify-center items-center min-h-screen p-4">
+        <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-6xl mx-8 my-8">
+            <pre class="mermaid w-full">
+                graph LR
+                    A((Project Charter)) -- A:4 --> B((WBS))
+                    B -- B:0 --> C((Github Repo Creation))
+                    B -- C:4 --> D((Statements of Work))
+                    B -- D:4 --> E((Framework Chosen))
+                    C -- E:1 --> E
+                    C -- F:7 --> F((Landing Page Design & Mockup))
+                    D -- G:10 --> F
+                    D -- H:3 --> G((Cost Estimate))
+                    G -- I:1 --> F
+                    E -- L:7 --> H((Basic Landing Page Developed))
+                    F -- K:7 --> H
+                    G -- J:1 --> H
+            </pre>
+        </div>
+    </div>
 
     <script src="{{ url_for('static', filename='node_modules/mermaid/dist/mermaid.js') }}"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        });
+    </script>
 {% endblock %}
