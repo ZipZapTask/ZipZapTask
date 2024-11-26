@@ -28,6 +28,14 @@ def wbs():
 @app.route('/gantt')
 def gantt():
     return render_template("gantt.html")
+    
+@app.route('/aoa')
+def aoa():
+    return render_template("aoa.html")
+
+@app.route('/risk_assessment')
+def risk_assessment():
+    return render_template('risk.html', risks=risks)
 
 if __name__ == '__main__':
     app.run()

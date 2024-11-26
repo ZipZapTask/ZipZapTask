@@ -46,7 +46,7 @@ team_members = [
     {
         'name': 'Sebastian Tovar',
         'role': 'Developer',
-        # 'description': 'This is some sample content for the card. You can put any text or additional elements here.',
+        'description': 'As a software developer, it is my job to make sure the website is working and easy to use.',
         'image_url': 'media/team/sebastian_tovar.jpeg'
     },
     {
