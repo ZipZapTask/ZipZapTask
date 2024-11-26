@@ -9,151 +9,61 @@
         <h1 class="text-3xl font-bold text-blue-600 mb-6">Cost Estimate: Estimate the Costs</h1>
     </div>
 
-    <!-- Cost Estimate Table -->
+    <!-- Unified Cost Estimate Table -->
     <div class="bg-white rounded-lg shadow-md p-6">
-        <table class="w-full border-2 border-blue-200">
-            <thead class="bg-blue-50">
-                <tr>
-                    <th class="border-b-2 border-blue-300 p-3 text-left">Item/Name</th>
-                    <th class="border-b-2 border-blue-300 p-3 text-left">Expected Value</th>
-                    <th class="border-b-2 border-blue-300 p-3 text-left">Range</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Employee Salaries Section -->
-                <tr class="bg-blue-100 border-b-2 border-blue-200">
-                    <td colspan="3" class="border-x-2 border-blue-200 p-3 font-bold">Employee Salaries</td>
-                </tr>
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Researchers</td>
-                    <td class="border-x-2 border-blue-200 p-3">$101,000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$54,000 - $185,000/yearly</td>
-                </tr>
+        <div class="w-full overflow-x-auto">
+            <table class="w-full table-fixed border-collapse border border-blue-200">
+                <thead class="bg-blue-50">
+                    <tr>
+                        <th class="border border-blue-200 p-3 text-left w-1/3 min-w-[150px]">Item</th>
+                        <th class="border border-blue-200 p-3 text-right w-1/3 min-w-[150px]">Expected Cost</th>
+                        <th class="border border-blue-200 p-3 text-right w-1/3 min-w-[150px]">Cost Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for section in cost_sections %}
+                    <!-- Section Title Row with Increased Font Size and Spacing -->
+                    <tr>
+                        <td colspan="3" class="bg-blue-100 p-6 font-extrabold text-2xl text-left">{{ section.title }}</td>
+                    </tr>
+                    <!-- Items in the Section -->
+                    {% for item in section['items'] %}
+                    <tr class="hover:bg-blue-50 transition-colors">
+                        <td class="border border-blue-200 p-3 font-medium align-middle">{{ item.name }}</td>
+                        <td class="border border-blue-200 p-3 text-right text-sm whitespace-nowrap">{{ item.expected }}</td>
+                        <td class="border border-blue-200 p-3 text-right text-sm text-gray-600">
+                            {% if item.range != 'N/A' %}{{ item.range }}{% else %}N/A{% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <!-- Spacing Row Between Sections -->
+                    <tr>
+                        <td colspan="3" class="h-6"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Developers</td>
-                    <td class="border-x-2 border-blue-200 p-3">$114,106/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$56,714 - $128,631/yearly</td>
-                </tr>
-
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Designers</td>
-                    <td class="border-x-2 border-blue-200 p-3">$78,000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$55,000 - $108,000/yearly</td>
-                </tr>
-
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Project Manager</td>
-                    <td class="border-x-2 border-blue-200 p-3">$91,409/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$74,500 - $105,757/yearly</td>
-                </tr>
-
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Legal and Compliance</td>
-                    <td class="border-x-2 border-blue-200 p-3">$125,000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$100,000 - $150,000/yearly</td>
-                </tr>
-
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Tech Support</td>
-                    <td class="border-x-2 border-blue-200 p-3">$76,000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$76,000 - $148,000/yearly</td>
-                </tr>
-
-
-                <!-- Website Costs Section -->
-                <tr class="bg-blue-100">
-                    <td colspan="3" class="border p-3 font-bold">Website Costs</td>
-                </tr>
-
-                <tr class="border-b border-blue-100">
-                    <td class="border-x-2 border-blue-200 p-3">Servers</td>
-                    <td class="border-x-2 border-blue-200 p-3">$2.50/Month</td>
-                    <td class="border-x-2 border-blue-200 p-3">$2.50 - $3.18</td>
-                </tr>
-
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Domain Name</td>
-                    <td class="border-x-2 border-blue-200 p-3">Bundled w Server cost</td>
-                    <td class="border-x-2 border-blue-200 p-3">N/A</td>
-                </tr>
-
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">SSL</td>
-                    <td class="border-x-2 border-blue-200 p-3">Bundled w Server cost</td>
-                    <td class="border-x-2 border-blue-200 p-3">N/A</td>
-                </tr>
-                
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Storage</td>
-                    <td class="border-x-2 border-blue-200 p-3">Bundled w Server cost</td>
-                    <td class="border-x-2 border-blue-200 p-3">N/A</td>
-                </tr>
-
-                <!-- Marketing Section -->
-                <tr class="bg-blue-100">
-                    <td colspan="3" class="border p-3 font-bold">Marketing</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Social media accounts</td>
-                    <td class="border-x-2 border-blue-200 p-3">Free</td>
-                    <td class="border-x-2 border-blue-200 p-3">N/A</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Tiktok Ads</td>
-                    <td class="border-x-2 border-blue-200 p-3">$35 per campaign</td>
-                    <td class="border-x-2 border-blue-200 p-3">$25-80 per campaign</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Instagram Ads</td>
-                    <td class="border-x-2 border-blue-200 p-3">$35 per campaign</td>
-                    <td class="border-x-2 border-blue-200 p-3">$25-80 per campaign</td>
-                </tr>
-
-                <!-- App Testing and Maintenance Section -->
-                <tr class="bg-blue-100">
-                    <td colspan="3" class="border p-3 font-bold">App Testing & Maintenance</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Focus group</td>
-                    <td class="border-x-2 border-blue-200 p-3">$500</td>
-                    <td class="border-x-2 border-blue-200 p-3">$200-$700</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Maintenance Security Updates</td>
-                    <td class="border-x-2 border-blue-200 p-3">$500/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$100-$1000/yearly</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Backups</td>
-                    <td class="border-x-2 border-blue-200 p-3">$300/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$100-$500/yearly</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Content Updates</td>
-                    <td class="border-x-2 border-blue-200 p-3">$2000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$500-$5000/yearly</td>
-                </tr>
-                <tr>
-                    <td class="border-x-2 border-blue-200 p-3">Analytics Review</td>
-                    <td class="border-x-2 border-blue-200 p-3">$1000/yearly</td>
-                    <td class="border-x-2 border-blue-200 p-3">$200-$2000/yearly</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Resources Section -->
-        <div class="mt-6 text-sm text-gray-600">
-            <h2 class="font-bold mb-2">Resources:</h2>
-            <ul class="list-disc list-inside">
-                <li>Job Search | Indeed</li>
-                <li>CoPilot AI A Guide to Startup Salaries & Compensation</li>
-                <li>The Founders Network</li>
-                <li>ChatGPT</li>
-                <li>How Much Does A Website Cost? (2024 Guide) – Forbes Advisor</li>
-                <li>Tiktok Advertising Costs</li>
-                <li>Instagram Advertising Costs</li>
-            </ul>
+    <!-- Resources Section -->
+    <div class="mt-6 text-sm text-gray-600">
+        <h2 class="font-bold mb-2">Resources:</h2>
+        <div class="w-full overflow-x-auto">
+            <table class="w-full table-fixed border-collapse border border-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="border border-gray-200 p-3 text-left w-full min-w-[300px]">Reference Materials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for resource in resources %}
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="border border-gray-200 p-3 align-middle">{{ resource }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

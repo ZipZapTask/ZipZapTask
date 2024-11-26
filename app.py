@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from data.team_members import team_members
 from data.routes import routes
 from data.wbs_data import converted_data
+from data.cost_sections import cost_sections, resources
 
 app = Flask(__name__)
 
@@ -27,7 +28,8 @@ def wbs():
 
 @app.route('/costEstimate')
 def costEstimate():
-    return render_template("costEstimate.html")
+    return render_template("costEstimate.html", cost_sections=cost_sections, 
+                           resources=resources)
 
 @app.route('/criticalPathAnalysis')
 def criticalPathAnalysis():
