@@ -12,20 +12,180 @@ function getTasks() {
   if (!tasks) {
     tasks = [
       {
-        id: 1,
-        name: 'Project Planning',
-        startDate: '2024-11-10',
-        endDate: '2024-11-20',
-        completion: 75,
-        members: ['Alice', 'Bob']
+        id: 3,
+        name: 'Home/Landing Page',
+        startDate: '2024-10-03',
+        endDate: '2024-10-03',
+        completion: 100,
+        members: ['Everyone']
       },
       {
-        id: 2,
-        name: 'Design Phase',
-        startDate: '2024-11-15',
-        endDate: '2024-11-25',
-        completion: 30,
-        members: ['Charlie']
+        id: 4,
+        name: 'Project Charter Creation',
+        startDate: '2024-10-03',
+        endDate: '2024-10-03',
+        completion: 100,
+        members: ['Everyone']
+      },
+      {
+        id: 5,
+        name: 'Project Charter Approval',
+        startDate: '2024-10-03',
+        endDate: '2024-10-03',
+        completion: 100,
+        members: ['Samuel Powers']
+      },
+      {
+        id: 6,
+        name: 'Team Building Exercises',
+        startDate: '2024-10-03',
+        endDate: '2024-10-10',
+        completion: 100,
+        members: ['Samuel Powers']
+      },
+      {
+        id: 7,
+        name: 'Status Reports',
+        startDate: '2024-10-03',
+        endDate: '2024-11-30',
+        completion: 100,
+        members: ['Eric']
+      },
+      {
+        id: 8,
+        name: 'Framework and Systems Selections',
+        startDate: '2024-10-03',
+        endDate: '2024-10-10',
+        completion: 100,
+        members: ['Developers']
+      },
+      {
+        id: 9,
+        name: 'Work Breakdown Structure',
+        startDate: '2024-10-03',
+        endDate: '2024-10-17',
+        completion: 100,
+        members: ['Nick', 'Zach', 'Eric']
+      },
+      {
+        id: 10,
+        name: 'GitHub Repo Creation',
+        startDate: '2024-10-03',
+        endDate: '2024-10-05',
+        completion: 100,
+        members: ['Vinay']
+      },
+      {
+        id: 11,
+        name: 'Demonstration 1',
+        startDate: '2024-10-17',
+        endDate: '2024-10-17',
+        completion: 100,
+        members: ['Vinay', 'Jaecar', 'Sam']
+      },
+      {
+        id: 12,
+        name: 'Statements of Work',
+        startDate: '2024-10-10',
+        endDate: '2024-12-07',
+        completion: 100,
+        members: ['Everyone']
+      },
+      {
+        id: 13,
+        name: 'Gantt Chart',
+        startDate: '2024-10-17',
+        endDate: '2024-11-21',
+        completion: 95,
+        members: ['Jaecar']
+      },
+      {
+        id: 14,
+        name: 'Working Calendar',
+        startDate: '2024-10-23',
+        endDate: '2024-11-21',
+        completion: 80,
+        members: ['Jaecar', 'Vinay']
+      },
+      {
+        id: 15,
+        name: 'Demonstration 2',
+        startDate: '2024-10-31',
+        endDate: '2024-10-31',
+        completion: 100,
+        members: ['Vinay', 'Sam']
+      },
+      {
+        id: 16,
+        name: 'Network Diagram',
+        startDate: '2024-11-12',
+        endDate: '2024-11-21',
+        completion: 100,
+        members: ['Nick', 'Zach', 'Eric']
+      },
+      {
+        id: 17,
+        name: 'Critical Path Analysis',
+        startDate: '2024-11-21',
+        endDate: '2024-11-28',
+        completion: 100,
+        members: ['Nick', 'Zach', 'Eric']
+      },
+      {
+        id: 18,
+        name: 'Cost Estimates',
+        startDate: '2024-11-14',
+        endDate: '2024-11-16',
+        completion: 100,
+        members: ['Nick', 'Zach', 'Eric']
+      },
+      {
+        id: 19,
+        name: 'Risk Management Plans',
+        startDate: '2024-11-14',
+        endDate: '2024-11-16',
+        completion: 100,
+        members: ['Jaecar']
+      },
+      {
+        id: 20,
+        name: 'Demonstration 3',
+        startDate: '2024-11-07',
+        endDate: '2024-11-07',
+        completion: 100,
+        members: ['Vinay', 'Sam']
+      },
+      {
+        id: 21,
+        name: 'Reflections',
+        startDate: '2024-11-23',
+        endDate: '2024-11-30',
+        completion: 0,
+        members: ['Everyone']
+      },
+      {
+        id: 22,
+        name: 'Formatting Checks',
+        startDate: '2024-11-30',
+        endDate: '2024-12-02',
+        completion: 0,
+        members: ['Jaecar', 'Eric']
+      },
+      {
+        id: 23,
+        name: 'Writing Checks',
+        startDate: '2024-11-30',
+        endDate: '2024-12-02',
+        completion: 0,
+        members: ['Everyone']
+      },
+      {
+        id: 24,
+        name: 'Project Submission',
+        startDate: '2024-11-30',
+        endDate: '2024-12-03',
+        completion: 0,
+        members: ['Samuel Powers']
       }
     ];
     localStorage.setItem('tasks', JSON.stringify(tasks));
