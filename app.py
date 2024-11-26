@@ -25,6 +25,10 @@ def profile():
 def wbs():
     return render_template("wbs.html", wbs_data=converted_data)
 
+@app.route('/aoa')
+def aoa():
+    return render_template("aoa.html")
+
 @app.route('/risk_assessment')
 def risk_assessment():
     return render_template('risk.html', risks=risks)
