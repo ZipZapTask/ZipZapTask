@@ -2,8 +2,8 @@ team_members = [
     {
         'name': 'Sam Powers',
         'role': 'Project manager',
-        'description': 'As project manager it is my job to make sure that the requirement and deadlines are met as well'
-                       ' as helping everyone on the team has the things they need to Compleat there tasks',
+        'description': 'As the project manager, it is my job to make sure that the requirements and deadlines are met as well'
+                       ' as helping everyone on the team has the things they need to complete their tasks',
         'image_url': 'media/team/sam_powers.jpeg'
     },
     {
@@ -11,7 +11,7 @@ team_members = [
         'role': 'Research',
         'description': 'My job is to create a website that includes figuring out what the website is for and who will '
                        'use it. They gather and check all the information that will go on the site. They also talk to '
-                       'people and test the site to make sure it’s easy to use. Researchers look at other similar '
+                       'people and test the site to ensure it’s easy to use. Researchers look at other similar '
                        'websites to see what works and what doesn’t. They find the best words to help the site show up '
                        'in search engines. Finally, they use tools to see how well the site is doing and what visitors '
                        'are doing on it, then use this information to make improvements.',
@@ -20,7 +20,10 @@ team_members = [
     {
         'name': 'Jaecar Ly',
         'role': 'Designer',
-        'description': 'As a designer, I worked on creating the initial layout of pages and created the Gantt chart.',
+        'description': 'As a designer, I worked on creating the initial layout of pages and created three iterations of '
+                       'the Gantt chart as well as the project calendars. Like everyone else, I kept Sam updated with progress '
+                       'reports. I helped present during the first demonstration and created our risk management plans. Finally, '
+                       'I helped perform writing and formatting checks throughout the project.',
         'image_url': 'media/team/jaecar_ly.jpeg'
     },
     {
