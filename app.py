@@ -35,7 +35,7 @@ def aoa():
 
 @app.route('/risk_assessment')
 def risk_assessment():
-    return render_template('risk.html', risks=risks)
+    return render_template('risk.html')
 
 if __name__ == '__main__':
     app.run()
