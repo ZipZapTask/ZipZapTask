@@ -26,9 +26,13 @@ routes = [
         'url': 'aoa'
     },
 
-     {
+    {
         'name': 'Risk Assessment',
         'url': 'risk_assessment'
+    },
+    {
+        'name': 'Progress & Status Report',
+        'url': 'progress_report'
     },
 
     # Add more items here
