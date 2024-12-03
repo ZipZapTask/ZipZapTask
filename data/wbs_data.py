@@ -43,28 +43,7 @@ wbs_data = [
             }
         ]
     },
-    {
-        "title": "SOWs",
-        "color": "yellow",
-        "items": [
-            {
-                "title": "Project Manager",
-                "description": "The project manager will be listed with a description of their contributions."
-            },
-            {
-                "title": "Developers",
-                "description": "Each developer will be listed with their contributions."
-            },
-            {
-                "title": "Designers",
-                "description": "Each designer will be listed with their contributions."
-            },
-            {
-                "title": "Researchers",
-                "description": "Each researcher will be listed with their contributions."
-            }
-        ]
-    },
+   
     {
         "title": "Gantt Chart",
         "color": "purple",
