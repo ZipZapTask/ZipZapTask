@@ -7,19 +7,18 @@ routes = [
         'name': 'Profile',
         'url': 'profile'
     },
-{
+    {
         'name': 'WBS',
         'url': 'wbs'
     },
-    
     {
-        'name': 'Project Charter',
-        'url': 'projectCharter'
+        'name': 'Gantt Chart',
+        'url': 'gantt'
     },
 
     {
-        'name': 'Critical Path Analysis',
-        'url': 'criticalPathAnalysis'
+        'name': 'Project Charter',
+        'url': 'projectCharter'
     },
 
     {
@@ -28,8 +27,13 @@ routes = [
     },
 
     {
-        'name': 'Risk Management',
-        'url': 'riskManagement'
+        'name': 'AOA Diagram',
+        'url': 'aoa'
+    },
+
+     {
+        'name': 'Risk Assessment',
+        'url': 'risk_assessment'
     },
 
     # Add more items here

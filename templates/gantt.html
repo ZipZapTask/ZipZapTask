@@ -1,0 +1,32 @@
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/gantt.css') }}">
+{% endblock %}
+
+{% extends 'base.html' %}
+
+{% block title %} Gantt Chart {% endblock %}
+
+{% block content %}
+    <div class="gantt-chart-container">
+        <h1 style="margin-bottom: 20px;">Project Gantt Chart</h1>
+
+        <div class="input-group">
+            <input type="text" id="taskName" placeholder="Task name">
+            <input type="date" id="startDate">
+            <input type="date" id="endDate">
+            <input type="number" id="completion" placeholder="Completion %" min="0" max="100" value="0">
+            <input type="text" id="members" placeholder="Members (comma-separated)">
+        </div>
+        <button onclick="addTask()" style="width: 100%; margin-bottom: 20px;">Add Task</button>
+
+        <div class="gantt-container">
+            <div class="gantt-header">
+                <div>Task</div>
+                <div id="dateHeader" class="dates"></div>
+            </div>
+            <div id="taskList"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static',filename='scripts/gantt.js') }}"></script>
+{% endblock %}

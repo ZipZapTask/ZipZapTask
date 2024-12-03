@@ -26,6 +26,7 @@ def profile():
 def wbs():
     return render_template("wbs.html", wbs_data=converted_data)
 
+<<<<<<< HEAD
 @app.route('/costEstimate')
 def costEstimate():
     return render_template("costEstimate.html", cost_sections=cost_sections, 
@@ -38,6 +39,19 @@ def criticalPathAnalysis():
 @app.route('/riskManagement')
 def riskManagement():
     return render_template("riskManagement.html")
+=======
+@app.route('/gantt')
+def gantt():
+    return render_template("gantt.html")
+    
+@app.route('/aoa')
+def aoa():
+    return render_template("aoa.html")
+
+@app.route('/risk_assessment')
+def risk_assessment():
+    return render_template('risk.html')
+>>>>>>> main
 
 if __name__ == '__main__':
     app.run()
