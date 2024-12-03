@@ -22,6 +22,11 @@ routes = [
     },
 
     {
+        'name': 'Cost Estimates',
+        'url': 'costEstimate'
+    },
+
+    {
         'name': 'AOA Diagram',
         'url': 'aoa'
     },
