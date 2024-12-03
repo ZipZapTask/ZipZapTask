@@ -42,6 +42,9 @@ def aoa():
 def risk_assessment():
     return render_template('risk.html')
 
+@app.route('/progress_report')
+def progress_report():
+    return render_template('progressReport.html')
 
 if __name__ == '__main__':
     app.run()
