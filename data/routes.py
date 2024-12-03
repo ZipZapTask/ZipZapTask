@@ -4,7 +4,7 @@ routes = [
         'url': 'home'
     },
     {
-        'name': 'Profile',
+        'name': 'Profile & SOW',
         'url': 'profile'
     },
     {
