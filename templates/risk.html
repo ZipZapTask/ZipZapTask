@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}Risk Mitigation Strategies{% endblock %}
 
@@ -9,307 +9,296 @@
         <h1 class="text-3xl font-bold text-blue-600 mb-6">Risk Mitigation Strategies: To-Do List App</h1>
     </div>
 
-    <!-- Data Breach Risk -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
-            Data Breach Risk
-        </h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                <strong>Risk Level:</strong> High Risk, Low Likelihood
-            </p>
-            <p class="text-gray-700">
-                Unauthorized access to user data could lead to exposure of sensitive information, such as users' schedules, personal details, or login credentials.
-            </p>
+    <!-- Risk Sections Container -->
+    <div class="space-y-8">
+        <!-- Data Breach Risk -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
+                Data Breach Risk
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    <strong>Risk Level:</strong> High Risk, Low Likelihood
+                </p>
+                <p class="text-gray-700">
+                    Unauthorized access to user data could lead to exposure of sensitive information, such as users' schedules, personal details, or login credentials.
+                </p>
 
-            <div class="bg-blue-50 p-4 rounded">
-                <h3 class="font-bold text-blue-800 mb-2">Mitigation Strategies:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Implement Strong Data Encryption: Encrypt all sensitive data both in transit (using HTTPS) and at rest to protect it from unauthorized access.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Use Multi-Factor Authentication (MFA): Require MFA for user accounts and restrict access to sensitive data to only essential personnel.
-                    </li>
-                </ul>
-            </div>
+                <div class="bg-blue-50 p-4 rounded">
+                    <h3 class="font-bold text-blue-800 mb-2">Mitigation Strategies:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Implement Strong Data Encryption: Encrypt all sensitive data both in transit (using HTTPS) and at rest to protect it from unauthorized access.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Use Multi-Factor Authentication (MFA): Require MFA for user accounts and restrict access to sensitive data to only essential personnel.
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="bg-blue-50 p-4 rounded mt-4">
-                <h3 class="font-bold text-blue-800 mb-2">Monitoring and Review:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Implement Real-Time Monitoring and Alerts: Set up monitoring tools to detect unauthorized access attempts and unusual data access patterns, and trigger alerts for immediate investigation.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8"></div>
-    <div class="bg-blue-50 p-4 rounded mt-4">
-        <h3 class="font-bold text-blue-800 mb-2">Roles and Responsibilities:</h3>
-        <ul class="space-y-3">
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Developers: Implement robust encryption protocols, secure authentication mechanisms, and conduct thorough security code reviews.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Project Managers: Oversee security implementation, prioritize security features, and ensure timely addressing of potential vulnerabilities.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Designers: Create secure user interface flows that support multi-factor authentication and clear security notifications.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Researchers: Analyze potential security risks, study emerging threat patterns, and recommend proactive protection strategies.
-            </li>
-        </ul>
-    </div>
-</div>
+                <div class="bg-blue-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-blue-800 mb-2">Monitoring and Review:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Implement Real-Time Monitoring and Alerts: Set up monitoring tools to detect unauthorized access attempts and unusual data access patterns, and trigger alerts for immediate investigation.
+                        </li>
+                    </ul>
+                </div>
 
-    <!-- Privacy Violations -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
-            Privacy Violations
-        </h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                <strong>Risk Level:</strong> High Risk, Low Likelihood
-            </p>
-            <p class="text-gray-700">
-                If the app collects and stores personal information without proper consent or fails to comply with privacy regulations like GDPR or CCPA, it could lead to legal and reputational issues.
-            </p>
-
-            <div class="bg-green-50 p-4 rounded">
-                <h3 class="font-bold text-green-800 mb-2">Mitigation Strategies:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Adopt Privacy by Design: Only collect necessary information and anonymize data wherever possible. Ensure compliance with privacy regulations like GDPR and CCPA.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Provide Transparent Privacy Policies: Clearly communicate to users how their data will be used, stored, and protected, and give them control over their information (e.g., consent, data deletion).
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-green-50 p-4 rounded mt-4">
-                <h3 class="font-bold text-green-800 mb-2">Monitoring and Review:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Conduct Regular Privacy Audits: Schedule audits to review compliance with privacy laws, check data handling practices, and confirm adherence to privacy policies and user consent requirements.
-                    </li>
-                </ul>
+                <div class="bg-blue-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-blue-800 mb-2">Roles and Responsibilities:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Developers: Implement robust encryption protocols, secure authentication mechanisms, and conduct thorough security code reviews.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Project Managers: Oversee security implementation, prioritize security features, and ensure timely addressing of potential vulnerabilities.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Designers: Create secure user interface flows that support multi-factor authentication and clear security notifications.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Researchers: Analyze potential security risks, study emerging threat patterns, and recommend proactive protection strategies.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bg-green-50 p-4 rounded mt-4">
-        <h3 class="font-bold text-green-800 mb-2">Roles and Responsibilities:</h3>
-        <ul class="space-y-3">
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Privacy Officer: Oversee compliance with privacy regulations, develop and maintain privacy policies, and conduct regular privacy impact assessments.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Data Protection Team: Implement data anonymization techniques, manage user consent mechanisms, and ensure secure data handling practices.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Legal Department: Review privacy policies, ensure regulatory compliance, and provide guidance on data protection requirements.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Development Team: Implement privacy controls in the application, follow secure coding practices, and integrate privacy-by-design principles.
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
 
+        <!-- Privacy Violations -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
+                Privacy Violations
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    <strong>Risk Level:</strong> High Risk, Low Likelihood
+                </p>
+                <p class="text-gray-700">
+                    If the app collects and stores personal information without proper consent or fails to comply with privacy regulations like GDPR or CCPA, it could lead to legal and reputational issues.
+                </p>
 
-    <!-- Cybersecurity Threats -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
-            Cybersecurity Threats
-        </h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                <strong>Risk Level:</strong> High Risk, Low Likelihood
-            </p>
-            <p class="text-gray-700">
-                Vulnerabilities like weak authentication, lack of encryption, or susceptibility to SQL injection could expose the app to cyber-attacks, including malware, phishing, and ransomware.
-            </p>
+                <div class="bg-green-50 p-4 rounded">
+                    <h3 class="font-bold text-green-800 mb-2">Mitigation Strategies:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Adopt Privacy by Design: Only collect necessary information and anonymize data wherever possible. Ensure compliance with privacy regulations like GDPR and CCPA.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Provide Transparent Privacy Policies: Clearly communicate to users how their data will be used, stored, and protected, and give them control over their information (e.g., consent, data deletion).
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="bg-red-50 p-4 rounded">
-                <h3 class="font-bold text-red-800 mb-2">Mitigation Strategies:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Perform Regular Security Audits: Conduct vulnerability assessments and penetration tests to identify and address security weaknesses.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Use Secure Coding Practices: Train developers on secure coding to prevent common vulnerabilities like SQL injection, cross-site scripting, and insecure authentication.
-                    </li>
-                </ul>
+                <div class="bg-green-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-green-800 mb-2">Monitoring and Review:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Conduct Regular Privacy Audits: Schedule audits to review compliance with privacy laws, check data handling practices, and confirm adherence to privacy policies and user consent requirements.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-green-800 mb-2">Roles and Responsibilities:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Privacy Officer: Oversee compliance with privacy regulations, develop and maintain privacy policies, and conduct regular privacy impact assessments.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Data Protection Team: Implement data anonymization techniques, manage user consent mechanisms, and ensure secure data handling practices.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Legal Department: Review privacy policies, ensure regulatory compliance, and provide guidance on data protection requirements.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Development Team: Implement privacy controls in the application, follow secure coding practices, and integrate privacy-by-design principles.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <!-- [Existing Cybersecurity Threats content] -->
-        
-        <div class="bg-red-50 p-4 rounded mt-4">
-            <h3 class="font-bold text-red-800 mb-2">Roles and Responsibilities:</h3>
-            <ul class="space-y-3">
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Developers: Implement secure coding practices, conduct regular code vulnerability assessments, and patch potential security holes.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Project Managers: Coordinate security training, manage penetration testing schedules, and track resolution of identified vulnerabilities.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Designers: Design interfaces that support secure user interactions and clearly communicate security features.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Researchers: Investigate emerging cybersecurity threats, recommend mitigation strategies, and stay updated on latest security trends.
-                </li>
-            </ul>
-        </div>
-    </div>
-    
 
-    <!-- Scheduling Conflicts and Errors -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
-            Scheduling Conflicts and Errors
-        </h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                <strong>Risk Level:</strong> High Risk, Low Likelihood
-            </p>
-            <p class="text-gray-700">
-                Errors in scheduling logic (e.g., double bookings, time zone mismatches) could reduce user trust and lead to dissatisfaction with the app's core function.
-            </p>
+        <!-- Cybersecurity Threats -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
+                Cybersecurity Threats
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    <strong>Risk Level:</strong> High Risk, Low Likelihood
+                </p>
+                <p class="text-gray-700">
+                    Vulnerabilities like weak authentication, lack of encryption, or susceptibility to SQL injection could expose the app to cyber-attacks, including malware, phishing, and ransomware.
+                </p>
 
-            <div class="bg-purple-50 p-4 rounded">
-                <h3 class="font-bold text-purple-800 mb-2">Mitigation Strategies:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Implement Conflict-Checking Algorithms: Design the app to detect and prevent double bookings and manage time zone differences automatically.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Conduct Regular Testing: Continuously test scheduling logic for different use cases to identify and fix potential errors before they impact users.
-                    </li>
-                </ul>
+                <div class="bg-red-50 p-4 rounded">
+                    <h3 class="font-bold text-red-800 mb-2">Mitigation Strategies:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Perform Regular Security Audits: Conduct vulnerability assessments and penetration tests to identify and address security weaknesses.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Use Secure Coding Practices: Train developers on secure coding to prevent common vulnerabilities like SQL injection, cross-site scripting, and insecure authentication.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-red-800 mb-2">Roles and Responsibilities:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Developers: Implement secure coding practices, conduct regular code vulnerability assessments, and patch potential security holes.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Project Managers: Coordinate security training, manage penetration testing schedules, and track resolution of identified vulnerabilities.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Designers: Design interfaces that support secure user interactions and clearly communicate security features.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Researchers: Investigate emerging cybersecurity threats, recommend mitigation strategies, and stay updated on latest security trends.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <!-- [Existing Scheduling Conflicts content] -->
-        
-        <div class="bg-purple-50 p-4 rounded mt-4">
-            <h3 class="font-bold text-purple-800 mb-2">Roles and Responsibilities:</h3>
-            <ul class="space-y-3">
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Developers: Design robust scheduling algorithms, implement conflict detection mechanisms, and create comprehensive error-handling systems.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Project Managers: Prioritize scheduling accuracy, coordinate testing efforts, and manage feature development for scheduling logic.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Designers: Create intuitive interfaces for displaying scheduling information, time zones, and potential conflicts.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Researchers: Study user scheduling behaviors, identify common pain points, and recommend improvements to scheduling workflows.
-                </li>
-            </ul>
-        </div>
-    </div>
 
-    <!-- Downtime and Availability Risks -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
-            Downtime and Availability Risks
-        </h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                <strong>Risk Level:</strong> Low Risk, Low Likelihood
-            </p>
-            <p class="text-gray-700">
-                If the app experiences downtime due to server issues, peak usage, or inadequate infrastructure, users might miss important scheduling events, leading to frustration.
-            </p>
+        <!-- Scheduling Conflicts and Errors -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
+                Scheduling Conflicts and Errors
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    <strong>Risk Level:</strong> High Risk, Low Likelihood
+                </p>
+                <p class="text-gray-700">
+                    Errors in scheduling logic (e.g., double bookings, time zone mismatches) could reduce user trust and lead to dissatisfaction with the app's core function.
+                </p>
 
-            <div class="bg-yellow-50 p-4 rounded">
-                <h3 class="font-bold text-yellow-800 mb-2">Mitigation Strategies:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Set Up Load Balancing and Scaling: Use load balancers and scalable cloud infrastructure to handle high traffic and reduce server overload risks.
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Establish a Redundant Backup System: Regularly back up data and use backup servers to quickly restore service in case of downtime.
-                    </li>
-                </ul>
-            </div>
+                <div class="bg-purple-50 p-4 rounded">
+                    <h3 class="font-bold text-purple-800 mb-2">Mitigation Strategies:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Implement Conflict-Checking Algorithms: Design the app to detect and prevent double bookings and manage time zone differences automatically.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Conduct Regular Testing: Continuously test scheduling logic for different use cases to identify and fix potential errors before they impact users.
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="bg-yellow-50 p-4 rounded mt-4">
-                <h3 class="font-bold text-yellow-800 mb-2">Monitoring and Review:</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Use Uptime Monitoring Services: Employ uptime monitoring tools to check the app's availability 24/7 and provide alerts if the app goes down, allowing quick response to minimize downtime.
-                    </li>
-                </ul>
+                <div class="bg-purple-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-purple-800 mb-2">Roles and Responsibilities:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Developers: Design robust scheduling algorithms, implement conflict detection mechanisms, and create comprehensive error-handling systems.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Project Managers: Prioritize scheduling accuracy, coordinate testing efforts, and manage feature development for scheduling logic.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Designers: Create intuitive interfaces for displaying scheduling information, time zones, and potential conflicts.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Researchers: Study user scheduling behaviors, identify common pain points, and recommend improvements to scheduling workflows.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-        <!-- [Existing Downtime Risks content] -->
-        
-        <div class="bg-yellow-50 p-4 rounded mt-4">
-            <h3 class="font-bold text-yellow-800 mb-2">Roles and Responsibilities:</h3>
-            <ul class="space-y-3">
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Developers: Implement load balancing, design scalable infrastructure, and create automated backup and recovery systems.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Project Managers: Monitor system performance, coordinate infrastructure upgrades, and manage disaster recovery planning.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Designers: Design clear communication interfaces for system status and maintenance notifications.
-                </li>
-                <li class="flex items-start">
-                    <span class="text-blue-600 mr-2">•</span>
-                    Researchers: Analyze system performance data, predict potential bottlenecks, and recommend optimization strategies.
-                </li>
-            </ul>
+
+        <!-- Downtime and Availability Risks -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
+                Downtime and Availability Risks
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    <strong>Risk Level:</strong> Low Risk, Low Likelihood
+                </p>
+                <p class="text-gray-700">
+                    If the app experiences downtime due to server issues, peak usage, or inadequate infrastructure, users might miss important scheduling events, leading to frustration.
+                </p>
+
+                <div class="bg-yellow-50 p-4 rounded">
+                    <h3 class="font-bold text-yellow-800 mb-2">Mitigation Strategies:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Set Up Load Balancing and Scaling: Use load balancers and scalable cloud infrastructure to handle high traffic and reduce server overload risks.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Establish a Redundant Backup System: Regularly back up data and use backup servers to quickly restore service in case of downtime.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-yellow-800 mb-2">Monitoring and Review:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Use Uptime Monitoring Services: Employ uptime monitoring tools to check the app's availability 24/7 and provide alerts if the app goes down, allowing quick response to minimize downtime.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-yellow-50 p-4 rounded mt-4">
+                    <h3 class="font-bold text-yellow-800 mb-2">Roles and Responsibilities:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Developers: Implement load balancing, design scalable infrastructure, and create automated backup and recovery systems.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Project Managers: Monitor system performance, coordinate infrastructure upgrades, and manage disaster recovery planning.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Designers: Design clear communication interfaces for system status and maintenance notifications.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            Researchers: Analyze system performance data, predict potential bottlenecks, and recommend optimization strategies.
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
     
 
     <!-- User Interface and Experience Issues -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+    <div class="bg-white rounded-lg shadow-md p-6">
         <h2 class="text-2xl font-bold text-blue-600 mb-4 pb-2 border-b border-gray-200">
             User Interface and Experience Issues
         </h2>
@@ -321,8 +310,8 @@
                 A confusing or difficult-to-navigate interface could lead to user errors, disengagement, and poor reviews, affecting the app's adoption and growth.
             </p>
 
-            <div class="bg-indigo-50 p-4 rounded">
-                <h3 class="font-bold text-indigo-800 mb-2">Mitigation Strategies:</h3>
+            <div class="bg-yellow-50 p-4 rounded">
+                <h3 class="font-bold text-yellow-800 mb-2">Mitigation Strategies:</h3>
                 <ul class="space-y-3">
                     <li class="flex items-start">
                         <span class="text-blue-600 mr-2">•</span>
@@ -334,32 +323,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="bg-yellow-50 p-4 rounded mt-4">
+                <h3 class="font-bold text-yellow-800 mb-2">Roles and Responsibilities:</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        Developers: Implement responsive design, ensure cross-platform compatibility, and optimize app performance.
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        Project Managers: Coordinate user testing, prioritize UX improvements, and manage iterative design processes.
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        Designers: Create intuitive, accessible, and visually appealing user interfaces that enhance user experience.
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-2">•</span>
+                        Researchers: Conduct user experience studies, gather and analyze user feedback, and recommend interface improvements.
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<div class="bg-white rounded-lg shadow-md p-6 mb-8">
-    <!-- [Existing UI Issues content] -->
-    
-    <div class="bg-indigo-50 p-4 rounded mt-4">
-        <h3 class="font-bold text-indigo-800 mb-2">Roles and Responsibilities:</h3>
-        <ul class="space-y-3">
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Developers: Implement responsive design, ensure cross-platform compatibility, and optimize app performance.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Project Managers: Coordinate user testing, prioritize UX improvements, and manage iterative design processes.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Designers: Create intuitive, accessible, and visually appealing user interfaces that enhance user experience.
-            </li>
-            <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                Researchers: Conduct user experience studies, gather and analyze user feedback, and recommend interface improvements.
-            </li>
-        </ul>
-    </div>
-</div>
 {% endblock %}
