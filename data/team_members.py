@@ -22,7 +22,7 @@ team_members = [
         'role': 'Designer',
         'description': 'As a designer, I worked on creating the initial layout of pages and layout of the site. '
                        'I also created most of the risk analysis work and all three versions of the Gantt chart. '
-                       'I also created the initial list of things to consider for the AOA.',
+                       'Finally, I supplied the initial list of things to consider for the AOA.',
         'image_url': 'media/team/jaecar_ly.jpeg'
     },
     {
